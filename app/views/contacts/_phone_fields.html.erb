@@ -1,0 +1,12 @@
+<div class="fields">
+
+  <%= f.label :phone_type %>
+  <%= f.select(:phone_type, [['Mobil', 'Mobil'], ['Home', 'Home'], ['Work', 'Work']]) %>
+  <%= f.label :phone_number, "Phone number" %>
+  <%= f.text_field :phone_number %><br />
+
+  <%= f.hidden_field :_destroy %>
+
+  <%= button_to_function "delete", "remove_fields(this)" %><br /><br />
+
+ </div>
