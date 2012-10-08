@@ -20,7 +20,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-#gem 'mootools-rails'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -39,6 +38,3 @@ gem 'jquery-rails'
 # gem 'debugger'
 gem 'execjs'
 gem 'therubyracer'
-group :test do
-  gem 'capybara', '1.1.2'
-end

@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Contact.delete_all
+Contact.create(:first_name => 'Janko',
+                :last_name => 'Hrasko',
+                :address => 'Pod stranou 1',
+                :email => 'jh@gmail.com',
+                :phone => {:phone_type => "Mobil", :phone_number => "+421111111"}
+               )
+

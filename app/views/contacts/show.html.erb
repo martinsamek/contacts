@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<fieldset>
 <p>
   <b>First name:</b>
   <%= @contact.first_name %>
@@ -19,7 +19,22 @@
   <b>Email:</b>
   <%= @contact.email %>
 </p>
+</fieldset>
+<div class="CSSTableGenerator">
+<table>
+  <tr>
+    <td>Phone type</td>
+    <td>Phone number</td>
+  </tr>
+  <% @contact.phones.each do |phone|  %>
+      <tr class="<%= cycle('line_odd', 'line_even') %>" >
+        <td><%= phone.phone_type %></td>
+        <td><%= phone.phone_number %></td>
+      </tr>
 
-
+  <% end %>
+</table>
+</div>
+<br /><br />
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>

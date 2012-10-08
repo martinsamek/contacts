@@ -1,30 +1,11 @@
 Contacts::Application.routes.draw do
-
-  resources :contacts do
-    member do
-      put :show
-      put :edit
-      put :destroy
-    end
-  end
+  resources :contacts
 
   root to: 'static_pages#home'
 
-  match '/',                    to: 'static_pages#home'
   match '/help',                to: 'static_pages#help'
   match '/about',               to: 'static_pages#about'
   match '/contact_information', to: 'static_pages#contact_information'
-
-  #match '/new',     to: 'contacts#new'
-  #match '/show',    to: 'contacts#show'
- # get "static_pages/home"
-
- # get "static_pages/help"
-
- # get "static_pages/about"
-
-
-
 
 
   # The priority is based upon order of creation:

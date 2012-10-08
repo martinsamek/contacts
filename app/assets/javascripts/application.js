@@ -10,6 +10,8 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
 
 function remove_fields(link) {
@@ -23,3 +25,4 @@ function add_fields(link, association, content) {
 
     $(link).parent().before(content.replace(regexp, new_id));
 };
+
